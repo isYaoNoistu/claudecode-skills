@@ -1,0 +1,58 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "nightingale_read": {
+      "type": "local",
+      "command": [
+        "npx", "-y", "@n9e/n9e-mcp-server", "stdio",
+        "--toolsets", "alerts",
+        "--toolsets", "targets",
+        "--toolsets", "datasource",
+        "--toolsets", "mutes",
+        "--toolsets", "notify_rules",
+        "--toolsets", "alert_subscribes",
+        "--toolsets", "event_pipelines",
+        "--toolsets", "users",
+        "--toolsets", "busi_groups"
+      ],
+      "enabled": true,
+      "timeout": 20000,
+      "environment": {
+        "N9E_BASE_URL": "http://120.48.58.4:17000",
+        "N9E_TOKEN": "token",
+        "N9E_READ_ONLY": "true"
+      }
+    }
+  }
+}
+
+
+
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "nightingale_rw": {
+      "type": "local",
+      "command": [
+        "npx", "-y", "@n9e/n9e-mcp-server", "stdio",
+        "--toolsets", "alerts",
+        "--toolsets", "targets",
+        "--toolsets", "datasource",
+        "--toolsets", "mutes",
+        "--toolsets", "notify_rules",
+        "--toolsets", "alert_subscribes",
+        "--toolsets", "event_pipelines",
+        "--toolsets", "users",
+        "--toolsets", "busi_groups"
+      ],
+      "enabled": true,
+      "timeout": 20000,
+      "environment": {
+        "N9E_BASE_URL": "http://120.48.58.4:17000",
+        "N9E_TOKEN": "token",
+        "N9E_READ_ONLY": "false"
+      }
+    }
+  }
+}
