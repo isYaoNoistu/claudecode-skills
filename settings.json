@@ -1,0 +1,51 @@
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "api_keys",
+    "ANTHROPIC_BASE_URL": "https://代理商",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-6-20260205",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-6-20260205",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-6-20260205",
+    "ANTHROPIC_MODEL": "claude-opus-4-6-20260205",
+    "BASH_DEFAULT_TIMEOUT_MS": "300000",
+    "BASH_MAX_TIMEOUT_MS": "600000",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "55",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "32000",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_TELEMETRY": "1",
+    "MAX_THINKING_TOKENS": "16000",
+    "MCP_TIMEOUT": "60000",
+    "MCP_TOOL_TIMEOUT": "120000"
+  },
+  "hooks": {
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ccclub sync --silent",
+            "timeout": 30,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ccclub sync --silent",
+            "timeout": 30,
+            "async": true
+          }
+        ]
+      }
+    ]
+  }
+}
